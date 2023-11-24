@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            border:   #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .logo {
+            max-width: 150px;
+        }
+        .company-info {
+            margin-top: 20px;
+        }
+        .invoice-info {
+            margin-top: 30px;
+            text-align: right;
+        }
+        .customer-info {
+            margin-top: 30px;
+        }
+        .table-container {
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            margin-top: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/dxgvsnxsj/image/upload/v1700668291/WhatsApp_Image_2023-11-22_at_16.44.21_59149d15_dfn5om.jpg" alt="Company Logo" height="100">
+        </div>
+        <div class="company-info">
+            <p>Dankano & Sons Multiventures<br>Koleosho Plaza, former Cement Depot, <br> Ilesha Ibariba Road, Sango Saki, <br>P.O Box 245, Sango, Saki, Oyo State. <br>Phone: (123) 456-7890 <br>Email: info@yourcompany.com</p>
+        </div>
+        <div class="invoice-info">
+            <p>Invoice:Inv-{{invoice.uniqueId}} <br>Date: {{invoice.date_created}}</p>
+            <p></p>
+        </div>
+        <div class="customer-info">
+            <p>Customer Name: {{invoice.client_name}} <br>Customer Phone: {{invoice.client_phone}} <br> Payment Status: {{invoice.payment_status}}</p>
+        </div>
+        <div style="margin-top: 30px;">
+            <table style=" width: 100%; border-collapse: collapse;">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                {% if products %}
+                {% for product in products %}
+                <tr>
+                    <td>{{product.product_name}}</td>
+                    <td>{{product.quantity}}{{product.unit}}</td>
+                    <td>₦{{product.price}}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+                <!-- Add more rows as needed -->
+            </table>
+        </div>
+        <div style="margin-top: 20px; text-align: right;">
+            <p>Total: ₦{{total}}</p>
+        </div>
+    </div>
+</body>
+</html>

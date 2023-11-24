@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Invoice</title>
+    <link rel="stylesheet" href="{% static "./invoice.css" %}">
+    
+</head>
+<body>
+    <span> <h1 class="Raleway bod">This Page is not Available for this Screen Size</h1></span>
+    <div class="body2">
+        <div class="cart-d-logo">
+            <img src="{% static "./DANKANO_LOGO-removebg-preview.png" %}" alt="#companylogo" height="100">
+            <span> <h1 class="Raleway">Dankano & Sons Multiventures</h1></span>
+            <p class="taskhead">Please Select a Task</p>
+        </div>
+        <div class="task-board">
+            <a href="{% url "display_invoices" %}">
+                <div class="cards">
+                <div class="log">
+                    <img src="{% static "./icons8-ellipsis-30.png" %}" height="15" alt="">
+                </div>
+                <div class="image">
+                    <img src="{% static "./e-commerace.png" %}" alt="#sales" height="80">
+                </div>
+                <div class="text">
+                    <h3 class="header">Sales Invoice</h3>
+                    <p>Record sales and issue customer invoice in sales invoice</p>
+                </div>
+                </div>
+            </a>
+            <a href="#?">
+            <div class="cards">
+                <div class="log">
+                    <img src="{% static "./icons8-ellipsis-30.png" %}" height="15" alt="">
+                </div>
+                <div class="image">
+                    <img src="{% static "./icons8-credit-control-96.png" %}" alt="" height="80">
+                </div>
+                <div class="text">
+                    <h3 class="header">Debit Invoice</h3>
+                    <p>Record Debit and issue customer Debt in Dept invoice</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url "sales_history" %}">
+            <div class="cards">
+                <div class="log">
+                    <img src="{% static "./icons8-ellipsis-30.png" %}" height="15" alt="">
+                </div>
+                <div class="image">
+                    <img src="{% static "./icons8-history-folder-94.png" %}" alt="" height="80">
+                </div>
+                <div class="text">
+                    <h3 class="header">Product History</h3>
+                    <p>View Purchase history and sales legend</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url "debit_invoices" %}">
+            <div class="cards">
+                <div class="log">
+                    <img src="{% static "./icons8-ellipsis-30.png" %}" height="15" alt="" height="80">
+                </div>
+                <div class="image">
+                    <img src="{% static "./icons8-activity-history-64 (1).png" %}" alt="" height="80">
+                </div>
+                <div class="text">
+                    <h3 class="header">Debit History</h3>
+                    <p>View customer debit and debt history Debit Log</p>
+                </div>
+            </div>
+            </a>
+           
+        </div>
+        <div>
+            
+        </div>
+        <a href="{% url "logout" %}"><button class="waybill btn"><p>Log Out</p></button></a>
+    </div>
+</body>
+</html>

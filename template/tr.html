@@ -1,0 +1,677 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Side Nav</title>
+    <link rel="stylesheet" href="./invoice.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .main {
+            transition: margin-left 0.3s;
+            padding: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .sidenav {
+                width: 0;
+            }
+
+            .sidenav a {
+                display: none;
+            }
+
+            .sidenav .closebtn {
+                display: none;
+            }
+
+            .main {
+                margin-left: 0;
+            }
+
+            .main span {
+                font-size: 30px;
+                cursor: pointer;
+                margin-left: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9665;</a>
+        h1 class="white Raleway">Dankano Inves<i>tment</i></h1>
+            <div class="w-t-s">
+                <img src="./e-commerace.png" alt="" height="200">
+            </div>
+            <div>
+                <a href="" ><button class="s-d-h" >Visit Sale History</button></a>
+            </div>
+    </div>
+
+    <div class="main">
+        <span onclick="openNav()">&#9654; Menu</span>
+        <div class="mais">
+            <div class="logthetable">
+                <h1 class="frs Raleway">Dankano Inves<i>tment</i></h1>
+                 <h1 class="logo">Sales <i>Invoice</i></h1>
+                    <div class="logs">
+                        <input type="text" name="" id="" class="inputparam" placeholder="customer name">
+                        <input type="text" name="" id="" class="inputparam" placeholder="Attendant Name">
+                    </div> <br>
+                    <div class="purchasebadge">    
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty" >
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>                         
+                            <input type="text" placeholder="Qty" class="qty" >
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div>
+                        <div class="logs">
+                            <label for=""></label>
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                            <select type="text" name="" id="" class="inputparam" placeholder="Product">
+                                <option value="">Viju Cola</option>
+                                <option value="">Cocacola</option>
+                                <option value="">Fanta</option>
+                                <option value="">Bigi Sprite</option>
+                                <option value="">Bigi Cola</option>
+                                <option value="">Bigi Smoove</option>
+                                <option value="">Maltina</option>
+                                <option value="">Can Fanta</option>
+                                <option value="">Sprite</option>
+                                <option value="">freshyo</option>
+                                <option value="">Bigi malt</option>
+                                <option value="">Bigi tropica</option>
+                                <option value="">Bigi</option>
+                                <option value="">Hollandia Small</option>
+                                <option value="">Hollandia Big</option>
+                                <option value="">Tropical</option>
+                                <option value="">Apple Juice</option>
+                                <option value="">CHI Exoctic</option>
+                                <option value="">Malt</option>
+                                <option value="">Amstel</option>
+                                <option value="">Sprite</option>
+                            </select>
+                            <input type="text" placeholder="Qty" class="qty">
+                            <input type="text" placeholder="₦ Price" class="qty">
+                        </div> <br>
+                            <div class="logs left">
+                                <button class="Scts">Print Receipt</button>
+                                <button class="Scts">Print Waybill</button>
+                                <button class="Scts"><a href="./salesinvo.html"> Cancle Purchase</a></button>
+                                <button class="Scts"> <a href="./invoice.html">Home</a></button>
+                            </div>
+                            <p style="margin-left: 20px;">You may use the Waybill button to process sales that requires waybill. <b> Waybill requires A4 paper printer</b></p>
+                    </div>
+             </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.querySelector('.main').style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.querySelector('.main').style.marginLeft= "0";
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Auto Search Table</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1>Auto Search Table</h1>
+  <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search for names...">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $('#searchInput').on('keyup', function(){
+    var searchText = $(this).val().toLowerCase();
+    $('#tableBody tr').filter(function(){
+      $(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
