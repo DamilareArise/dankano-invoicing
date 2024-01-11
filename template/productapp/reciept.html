@@ -71,14 +71,16 @@
                 <tr>
                     <th>Product</th>
                     <th>Quantity</th>
-                    <th>Total</th>
+                    <th>Price per Qty</th>
+                    <th>Total Price</th>
                 </tr>
                 {% if products %}
                 {% for product in products %}
                 <tr>
                     <td>{{product.product_name}}</td>
                     <td>{{product.quantity}}{{product.unit}}</td>
-                    <td>₦{{product.price}}</td>
+                    <td>{{product.price_per_Qty}}</td>
+                    <td>{{product.total_price}}</td>
                 </tr>
                 {% endfor %}
                 {% endif %}
@@ -86,7 +88,7 @@
             </table>
         </div>
         <div style="margin-top: 20px; text-align: right;">
-            <p>Total: ₦{{total}}</p>
+            <p style="font-weight: bold; font-size: large;">Total: #{{total}}</p>
         </div>
     </div>
 </body>

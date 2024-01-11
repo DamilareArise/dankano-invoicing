@@ -62,8 +62,13 @@ def createBuildInvoice(request, inv_id):
         inv_form = InvoiceForm(request.POST, instance=invoice)
        
         if prod_form.is_valid():
+            Qty = prod_form.cleaned_data['quantity']
+            total_price = prod_form.cleaned_data['price_per_Qty']
             obj = prod_form.save(commit=False)
-            obj.invoice = invoice
+            obj.invoice = invoice 
+            obj.total_price = total_price * Qty
+
+            print(total_price)
             obj.save()
 
             messages.success(request, "Invoice product added succesfully")
@@ -108,8 +113,11 @@ def editInvoice(request, inv_id):
 
             prod_form = ProductForm(request.POST)
             if prod_form.is_valid():
+                Qty = prod_form.cleaned_data['quantity']
+                total_price = prod_form.cleaned_data['price_per_Qty']
                 product = prod_form.save(commit=False)
                 product.invoice = invoice
+                product.total_price = total_price * Qty
                 product.save()
                 messages.success(request, "Product added successfully")
                 return redirect('edit_invoice', inv_id)
@@ -129,6 +137,7 @@ def editInvoice(request, inv_id):
             if prod_form.is_valid():
                 product = prod_form.save(commit=False)
                 product.invoice = invoice
+               
                 product.save()
                 messages.success(request, "Product added successfully")
                 return redirect('display_invoices')
@@ -210,7 +219,7 @@ def deleteProduct(request, prd_id):
 def salesHistory(request):
     products = Product.objects.all().order_by('date_created').reverse()
     len_item = len([item for item in products])
-    total = sum([product.price for product in products])
+    total = sum([product.total_price for product in products])
     total = f'{total:,}'
 
     return render (request, 'productapp/saleshistory.html', {'products':products, 'len_item':len_item, 'total':total})
@@ -220,7 +229,7 @@ def salesHistory(request):
 def  viewReciept(request, inv_id): 
     invoice = Invoice.objects.get(invoice_id = inv_id)
     products = Product.objects.all().filter(invoice_id = inv_id)
-    total = sum([product.price for product in products])
+    total = sum([product.total_price for product in products])
 
     pdf = html2pdf("productapp/reciept.html", {'products':products, 'total':total, 'invoice':invoice})
 
@@ -232,7 +241,7 @@ def  viewReciept(request, inv_id):
 def  viewWaybill(request, inv_id): 
     invoice = Invoice.objects.get(invoice_id = inv_id)
     products = Product.objects.all().filter(invoice_id = inv_id)
-    total = sum([product.price for product in products])
+    total = sum([product.total_price for product in products])
     print(total)
     pdf = html2pdf("productapp/waybill.html", {'products':products, 'total':total, 'invoice':invoice})
 
