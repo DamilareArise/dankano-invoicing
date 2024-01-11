@@ -66,9 +66,10 @@
                       <tr>
                         <th>#</th>
                         <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Date & Time</th>
+                        <th>Price per Qty</th>
                         <th>Quantity</th>
+                        <th>Total Price</th>
+                        <th>Date & Time</th>
                         <th>Remove Product</th>
                         
                       </tr>
@@ -87,13 +88,16 @@
                           </div>
                         </td>
                         <td>
-                          <p class="fw-bold mb-1">{{product.price}}</p>
-                        </td>
-                        <td>
-                          <p class="fw-normal mb-1">{{product.date_created}}</p>
+                          <p class="fw-bold mb-1">{{product.price_per_Qty}}</p>
                         </td>
                         <td>
                           <p class="fw-normal mb-1">{{product.quantity}}{{product.unit}}</p>
+                        </td>
+                        <td>
+                          <p class="fw-bold mb-1">{{product.total_price}}</p>
+                        </td>
+                        <td>
+                          <p class="fw-normal mb-1">{{product.date_created}}</p>
                         </td>
                         <td>
                           <button type="button" class="btn btn-link btn-sm btn-rounded text-danger" data-mdb-toggle="modal" data-mdb-target="#exampleModal_{{product.product_id}}">

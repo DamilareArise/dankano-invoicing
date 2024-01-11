@@ -57,7 +57,8 @@ class Product(models.Model):
 
     product_id = models.AutoField(primary_key=True)
     product_name = models.CharField(max_length=50, null=False, blank=False, unique=False)
-    price = models.FloatField(unique=False, blank=False, null=False)
+    price_per_Qty = models.FloatField(unique=False, blank=False, null=False)
+    total_price = models.FloatField(unique=False, blank=False, null=False, default = 0.0)
     quantity = models.IntegerField(null=True, blank=True)
     unit = models.CharField(choices=unit, null=False, default='Piece(s)', max_length=50)
     invoice = models.ForeignKey(Invoice, blank=True, null=True,  on_delete=models.CASCADE)
